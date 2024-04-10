@@ -24,6 +24,32 @@ float dotp(const std::vector<float>& vec1, const std::vector<float>& vec2) {
 	return result;
 }
 
+//Switch the columns and rows of a 2d matrix
+std::vector<std::vector<float>> transpose(const std::vector<std::vector<float>>& M)
+{
+	if (M.size() == 0)
+	{
+		std::cout << "Invalid matrix size, cannot transpose" << std::endl;
+		throw std::runtime_error{ "Transpose Error" };
+	}
+
+
+	std::vector<std::vector<float>> result{ };
+
+	for (unsigned int i{ }; i < M.at(0).size(); i++)
+	{
+		std::vector<float> tempVector{ };
+
+		for (unsigned int j{ }; j < M.size(); j++)
+		{
+			tempVector.push_back(M.at(j).at(i));
+		}
+		result.push_back(tempVector);
+	}
+
+	return result;
+
+}
 
 int main() {
 	// Test data, will either be input data into input layer, or output data from other neurons later
@@ -48,28 +74,8 @@ int main() {
 	};
 
 
-
-
-
 	std::vector<float> outputs{ };
 
-	// For each output, dot weights with inputs,
-	// then add bias and then repeat for all outputs
-
-
-	for (unsigned int i{0}; i < biases.size(); i++)
-	{
-		outputs.push_back(dotp(weights.at(i), inputs.at(i)));
-
-
-		outputs.at(i) += biases.at(i);
-
-	}
-
-
-	std::cout << outputs.at(0) << std::endl;
-	std::cout << outputs.at(1) << std::endl;
-	std::cout << outputs.at(2) << std::endl;
 
 	return 0;
 }
