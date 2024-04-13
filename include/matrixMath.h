@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-
+#include <vector>
 
 // May optimize if possible at a later date ~
 // Will also add to include math file later when all math functions are finished

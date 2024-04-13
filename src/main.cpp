@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
+#include "Layers.cpp"
 #include "matrixMath.h"
-
 
 int main() {
 	// Test data, will either be input data into input layer, or output data from other neurons later
@@ -10,7 +10,7 @@ int main() {
 		{1.0f, 2.0f, 3.0f, 2.5f },
 		{ 2.0f, 5.0f, -1.0f, 2.0f },
 		{ -1.5f, 2.7f, 3.3f, -0.8f }
-	}; // 3x4
+	};
 
 
 	return 0;
