@@ -1,10 +1,10 @@
 #pragma once
-
+#include<iostream>
 
 
 // May optimize if possible at a later date ~
 // Will also add to include math file later when all math functions are finished
-float dotp(const std::vector<float> vec1, const std::vector<float> vec2) {
+static float dotp(const std::vector<float> vec1, const std::vector<float> vec2) {
 
 	if (vec1.size() != vec2.size())
 	{
@@ -24,7 +24,7 @@ float dotp(const std::vector<float> vec1, const std::vector<float> vec2) {
 }
 
 //Switch the columns and rows of a 2d matrix
-std::vector<std::vector<float>> transpose(const std::vector<std::vector<float>>& M)
+static std::vector<std::vector<float>> transpose(const std::vector<std::vector<float>>& M)
 {
 	if (M.size() == 0)
 	{
@@ -52,9 +52,9 @@ std::vector<std::vector<float>> transpose(const std::vector<std::vector<float>>&
 
 // Multiplies 2 vectors together. Returns a matrix with the following dimensions: same # of rows as M1 and same # of cols as M2.
 // This operation can only be performed if M1's # of cols is equal to M2's number of rows.
-std::vector<std::vector<float>> matrixMult(const std::vector<std::vector<float>>& M1, const std::vector<std::vector<float>>& M2)
+static std::vector<std::vector<float>> matrixMult(const std::vector<std::vector<float>>& M1, const std::vector<std::vector<float>>& M2)
 {
-	if (M1.at(0).size() != M2.size())
+	if (M1.at(0).size() != M2.at(0).size())
 	{
 		std::cout << "Coult not multiply these vectors because of inconsistent dimensions" << std::endl;
 		throw std::runtime_error{ "Error" };
@@ -75,4 +75,25 @@ std::vector<std::vector<float>> matrixMult(const std::vector<std::vector<float>>
 	}
 
 	return resultMat;
+}
+
+
+
+
+
+
+static void printMatrix( const std::vector<std::vector<float>>& M )
+{
+	for (unsigned int i{ }; i < M.size(); i++)
+	{
+		for (unsigned int j{ }; j < M.at(0).size(); j++)
+		{
+
+			std::cout << M.at(i).at(j) << " ";
+
+		}
+
+		std::cout << std::endl;
+	}
+
 }

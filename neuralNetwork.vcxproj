@@ -134,8 +134,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Layers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Layers.h" />
     <ClInclude Include="include\matrixMath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
