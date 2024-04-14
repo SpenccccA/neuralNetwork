@@ -19,8 +19,10 @@ int main() {
 
 
 	layer1.forward(X);
-	
-	layer1.printOutputs();
+	//layer1.printOutputs();
+
+	layer2.forward(layer1.getOutputs());
+	layer2.printOutputs();
 
 	return 0;
 }

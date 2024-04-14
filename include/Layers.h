@@ -3,7 +3,7 @@
 #include <random>
 
 // Class which represents a layer of neurons. Contains info on the weights, biases, and outputs of the layer.
-class Layer_Dense 
+class Layer_Dense
 {
 
 private:
@@ -28,10 +28,14 @@ public:
 	// Prints the selected object's vector of biases
 	inline const void printBiases();
 
-	// Prints the selected object's output matrix
+	// Prints the selected object's outputs matrix
 	inline const void printOutputs();
 
-	inline void forward(const std::vector<std::vector<float>>& matrixInput);
+	// Returns the outputs of the layer.
+	inline const std::vector<std::vector<float>> getOutputs();
+
+	// Foward pass of data through the layer, will change the outputs
+	inline void forward(const std::vector<std::vector<float>>& input);
 
 	// Will randomize weights and biases.
 	// The size of the weights matrix will be determined by:
