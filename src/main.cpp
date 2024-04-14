@@ -13,5 +13,14 @@ int main() {
 	};
 
 
+	Layer_Dense layer1(4, 5);
+
+	Layer_Dense layer2(5, 2);
+
+
+	layer1.forward(X);
+	
+	layer1.printOutputs();
+
 	return 0;
 }
