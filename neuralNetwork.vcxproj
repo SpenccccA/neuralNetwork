@@ -133,12 +133,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ActivationFunction.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Layers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\ActivationFunction.h" />
     <ClInclude Include="include\Layers.h" />
-    <ClInclude Include="include\matrixMath.h" />
+    <ClInclude Include="include\neuralMath.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

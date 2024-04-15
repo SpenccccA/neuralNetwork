@@ -21,12 +21,18 @@
     <ClCompile Include="src\Layers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ActivationFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\matrixMath.h">
+    <ClInclude Include="include\neuralMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Layers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ActivationFunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,7 @@
 #include<iostream>
 #include <vector>
 
+
 // May optimize if possible at a later date ~
 // Will also add to include math file later when all math functions are finished
 static float dotp(const std::vector<float> vec1, const std::vector<float> vec2) {
@@ -22,6 +23,7 @@ static float dotp(const std::vector<float> vec1, const std::vector<float> vec2) 
 
 	return result;
 }
+
 
 //Switch the columns and rows of a 2d matrix
 static std::vector<std::vector<float>> transpose(const std::vector<std::vector<float>>& M)
@@ -49,6 +51,7 @@ static std::vector<std::vector<float>> transpose(const std::vector<std::vector<f
 	return result;
 
 }
+
 
 // Multiplies 2 vectors together. Returns a matrix with the following dimensions: same # of rows as M1 and same # of cols as M2.
 // This operation can only be performed if M1's # of cols is equal to M2's number of rows.
@@ -78,36 +81,25 @@ static std::vector<std::vector<float>> matrixMult(const std::vector<std::vector<
 }
 
 
+// Prints a vector, mainly for testing purposes.
+static void printVector(const std::vector<float>& vec)
+{
+	std::cout << "[";
+	for (unsigned int i{ }; i < vec.size() - 1; i++)
+	{
+		std::cout << vec.at(i) << ", ";
+	}
+	std::cout << vec.at(vec.size() - 1) << "]" << std::endl;
 
-
+}
 
 
 static void printMatrix( const std::vector<std::vector<float>>& M )
 {
 	for (unsigned int i{ }; i < M.size(); i++)
 	{
-		for (unsigned int j{ }; j < M.at(0).size(); j++)
-		{
-
-			std::cout << M.at(i).at(j) << " ";
-
-		}
-
-		std::cout << std::endl;
+		printVector(M.at(i));
 	}
 
 }
-
-// Prints a vector, mainly for testing purposes.
-static void printVector(const std::vector<float>& vec)
-{
-	for (unsigned int i{ }; i < vec.size() - 1; i++)
-	{
-		std::cout << vec.at(i) << ", ";
-	}
-	std::cout << vec.at(vec.size() - 1) << std::endl;
-
-}
-
-
 

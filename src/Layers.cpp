@@ -1,5 +1,5 @@
 #include "Layers.h"
-#include "matrixMath.h"
+#include "neuralMath.h"
 
 
 // Will randomize weights and biases.

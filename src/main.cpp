@@ -1,9 +1,13 @@
 #include <iostream>
 #include <vector>
 #include "Layers.cpp"
-#include "matrixMath.h"
+#include "neuralMath.h"
+#include "ActivationFunction.cpp"
 
 int main() {
+
+	/*
+	
 	// Test data, will either be input data into input layer, or output data from other neurons later
 	// X is the input data into the network.
 	std::vector<std::vector<float>> X{
@@ -23,6 +27,16 @@ int main() {
 
 	layer2.forward(layer1.getOutputs());
 	layer2.printOutputs();
+
+	*/
+
+	std::vector<std::vector<float>> inputs { {0.0f, 2.0f, -1.0f, 3.3f, -2.7f, 1.1f, 2.2f, -100.0f} };
+
+	Activation_ReLU activation1{ };
+
+	activation1.forward(inputs);
+
+	activation1.printOutputs();
 
 	return 0;
 }
